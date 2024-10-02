@@ -17,6 +17,15 @@ class FilterChipDisplay extends StatelessWidget {
       spacing: 8.0,
       runSpacing: 4.0,
       children: selectedFilters.map((filter) {
+        // Handling dynamic location entries
+        final filterIcon = filter.contains('location')
+            ? Icons.location_on
+            : filterIconsAndColors[filter]?['icon'] ?? Icons.help_outline;
+
+        final filterColor = filter.contains('location')
+            ? Colors.blue
+            : filterIconsAndColors[filter]?['color'] ?? Colors.grey;
+
         return Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4.0),
@@ -26,11 +35,11 @@ class FilterChipDisplay extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
-                  filterIconsAndColors[filter]!['icon'],
-                  color: filterIconsAndColors[filter]!['color'],
+                  filterIcon,
+                  color: filterColor,
                 ),
                 const SizedBox(width: 8),
-                Text(filter),
+                Text(filter.replaceFirst('location: ', '')), // Remove the prefix for display
                 const SizedBox(width: 8),
                 IconButton(
                   icon: const Icon(Icons.cancel_outlined, color: Colors.black54),
@@ -52,3 +61,4 @@ class FilterChipDisplay extends StatelessWidget {
     );
   }
 }
+

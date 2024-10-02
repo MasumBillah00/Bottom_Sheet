@@ -1,10 +1,12 @@
 import 'package:bottomsheet/screens/bottom_sheet.dart';
+import 'package:bottomsheet/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: myCustomTheme(),
       home: MyApp(),
     ),
   );
