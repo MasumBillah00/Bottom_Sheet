@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 
 ThemeData myCustomTheme() {
   return ThemeData(
-    primarySwatch: Colors.blue, // Define primary color
-    hintColor: Colors.orangeAccent, // Define accent color
+    primarySwatch: Colors.blue,
+    //hintColor: Color.fromARGB(255, 13, 117, 164),
+    hintColor: Colors.black,
 
     // Customizing AppBar
     appBarTheme: AppBarTheme(
@@ -45,18 +46,18 @@ ThemeData myCustomTheme() {
       fillColor: Colors.grey.shade200,
       contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.grey.shade300),
+        borderRadius: BorderRadius.circular(1),
+        borderSide: BorderSide(color: Colors.black),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(1),
         borderSide: BorderSide(color: Colors.grey.shade300),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: BorderSide(color: Colors.blue),
+        borderRadius: BorderRadius.circular(1),
+        borderSide: BorderSide(color: Colors.black),
       ),
-      labelStyle: TextStyle(fontSize: 14, color: Colors.grey.shade700),
+      labelStyle: TextStyle(fontSize: 14, color: Colors.black87),
     ),
 
     // Bottom Sheet Theme

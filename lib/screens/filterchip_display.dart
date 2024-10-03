@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class FilterChipDisplay extends StatelessWidget {
+class KeyWordDisplay extends StatelessWidget {
   final List<String> selectedFilters;
   final Map<String, Map<String, dynamic>> filterIconsAndColors;
   final Function(String) onFilterToggle;
 
-  const FilterChipDisplay({
+  const KeyWordDisplay({super.key,
     required this.selectedFilters,
     required this.filterIconsAndColors,
     required this.onFilterToggle,

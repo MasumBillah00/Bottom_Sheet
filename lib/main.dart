@@ -2,34 +2,37 @@ import 'package:bottomsheet/screens/bottom_sheet.dart';
 import 'package:bottomsheet/theme.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main()
+{
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: myCustomTheme(),
-      home: MyApp(),
+      home: const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Bottom Sheet Example')),
+      appBar: AppBar(title: const Text('Bottom Sheet')),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             showModalBottomSheet(
               context: context,
               isScrollControlled: true,
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
               ),
-              builder: (context) => FilterBottomSheet(),
+              builder: (context) => const FilterBottomSheet(),
             );
           },
-          child: Text('Show Filters'),
+          child: const Text('Show Filters'),
         ),
       ),
     );

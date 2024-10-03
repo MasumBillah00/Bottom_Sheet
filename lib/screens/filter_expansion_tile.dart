@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-class FilterExpansionTiles extends StatefulWidget {
+class ExpansionTiles extends StatefulWidget {
   final List<String> selectedFilters;
   final Function(String) onFilterToggle;
   final TextEditingController locationController;
   final String? selectedActivity;
   final Function(String) onActivitySelect;
 
-  const FilterExpansionTiles({
+  const ExpansionTiles({
     super.key,
     required this.selectedFilters,
     required this.onFilterToggle,
@@ -18,10 +18,10 @@ class FilterExpansionTiles extends StatefulWidget {
   });
 
   @override
-  _FilterExpansionTilesState createState() => _FilterExpansionTilesState();
+  ExpansionTilesState createState() => ExpansionTilesState();
 }
 
-class _FilterExpansionTilesState extends State<FilterExpansionTiles> {
+class ExpansionTilesState extends State<ExpansionTiles> {
   bool isSpot1Checked = false;
   bool isSpot2Checked = false;
 
@@ -34,10 +34,9 @@ class _FilterExpansionTilesState extends State<FilterExpansionTiles> {
         FocusScope.of(context).unfocus();
       },
       child: SingleChildScrollView(
-        padding: EdgeInsets.only(bottom: bottomInset), // Add padding when keyboard is open
+        padding: EdgeInsets.only(bottom: bottomInset),
         child: Column(
           children: [
-            // "When" ExpansionTile
             ExpansionTile(
               title: const Row(
                 children: [
@@ -56,6 +55,7 @@ class _FilterExpansionTilesState extends State<FilterExpansionTiles> {
                     widget.onFilterToggle('Today');
                   },
                 ),
+
                 ListTile(
                   title: const Text('Tomorrow'),
                   dense: true,
@@ -177,11 +177,11 @@ class _FilterExpansionTilesState extends State<FilterExpansionTiles> {
 
             // "Spot" ExpansionTile with checkboxes
             ExpansionTile(
-              title: Row(
+              title: const Row(
                 children: [
                   Icon(Icons.star_outlined, color: Colors.purple),
-                  const SizedBox(width: 5),
-                  const Text('Spot', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                   SizedBox(width: 5),
+                   Text('Spot', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
