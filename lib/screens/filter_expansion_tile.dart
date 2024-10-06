@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ExpansionTiles extends StatefulWidget {
@@ -28,7 +27,6 @@ class ExpansionTilesState extends State<ExpansionTiles> {
   @override
   Widget build(BuildContext context) {
     final bottomInset = MediaQuery.of(context).viewInsets.bottom;
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -55,7 +53,6 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                     widget.onFilterToggle('Today');
                   },
                 ),
-
                 ListTile(
                   title: const Text('Tomorrow'),
                   dense: true,
@@ -108,12 +105,11 @@ class ExpansionTilesState extends State<ExpansionTiles> {
               ],
             ),
             const Divider(thickness: 2, height: 1),
-
             // "Who" ExpansionTile
             ExpansionTile(
               title: const Row(
                 children: [
-                  Icon(Icons.person, color: Colors.green),
+                  Icon(Icons.person_search_rounded, color: Colors.black),
                   SizedBox(width: 5),
                   Text('Who', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 ],
@@ -143,7 +139,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
             ExpansionTile(
               title: const Row(
                 children: [
-                  Icon(Icons.event, color: Colors.orange),
+                  Icon(Icons.event_note_outlined, color:  Color.fromARGB(255,134, 99, 42),),
                   SizedBox(width: 5),
                   Text('Activities', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 ],
@@ -179,9 +175,9 @@ class ExpansionTilesState extends State<ExpansionTiles> {
             ExpansionTile(
               title: const Row(
                 children: [
-                  Icon(Icons.star_outlined, color: Colors.purple),
-                   SizedBox(width: 5),
-                   Text('Spot', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
+                  Icon(Icons.local_activity, color: Color.fromARGB(255,76, 175, 80),),
+                  SizedBox(width: 5),
+                  Text('Spot', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
@@ -196,7 +192,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                       widget.onFilterToggle('Spot 1');
                     });
                   },
-                  controlAffinity: ListTileControlAffinity.leading,  // Checkbox icon on the left
+                  controlAffinity: ListTileControlAffinity.leading,
                 ),
                 CheckboxListTile(
                   title: const Text('Spot 2'),
@@ -207,7 +203,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                       widget.onFilterToggle('Spot 2');
                     });
                   },
-                  controlAffinity: ListTileControlAffinity.leading,  // Checkbox icon on the left
+                  controlAffinity: ListTileControlAffinity.leading,
                 ),
               ],
             ),
@@ -217,6 +213,3 @@ class ExpansionTilesState extends State<ExpansionTiles> {
     );
   }
 }
-
-
-

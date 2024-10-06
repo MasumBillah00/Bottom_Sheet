@@ -1,14 +1,13 @@
-
 import 'package:flutter/material.dart';
 
 ThemeData myCustomTheme() {
   return ThemeData(
-    primarySwatch: Colors.blue,
+    primarySwatch: Colors.teal,
     //hintColor: Color.fromARGB(255, 13, 117, 164),
     hintColor: Colors.black,
 
     // Customizing AppBar
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: Color.fromARGB(255, 13, 117, 164),
       titleTextStyle: TextStyle(
         fontSize: 20,
@@ -18,7 +17,7 @@ ThemeData myCustomTheme() {
     ),
 
     // Custom TextTheme
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       headline1: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.black),
       headline2: TextStyle(fontSize: 28, fontWeight: FontWeight.w600, color: Colors.black87),
       bodyText1: TextStyle(fontSize: 16, color: Colors.black),
@@ -29,13 +28,12 @@ ThemeData myCustomTheme() {
     // Elevated Button Theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Color.fromARGB(255, 13, 117, 164), // Button color
-
+        backgroundColor: const Color.fromARGB(255, 13, 117, 164),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12), // Rounded corners
+          borderRadius: BorderRadius.circular(2),
         ),
-        textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         elevation: 4,
       ),
     ),
@@ -44,10 +42,10 @@ ThemeData myCustomTheme() {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: Colors.grey.shade200,
-      contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+      contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(1),
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: const BorderSide(color: Colors.black),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(1),
@@ -55,13 +53,13 @@ ThemeData myCustomTheme() {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(1),
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: const BorderSide(color: Colors.black),
       ),
-      labelStyle: TextStyle(fontSize: 14, color: Colors.black87),
+      labelStyle: const TextStyle(fontSize: 14, color: Colors.black87),
     ),
 
     // Bottom Sheet Theme
-    bottomSheetTheme: BottomSheetThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
