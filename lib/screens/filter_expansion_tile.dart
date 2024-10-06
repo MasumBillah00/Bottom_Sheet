@@ -44,7 +44,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
-              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8), // Reduced horizontal padding
               children: [
                 ListTile(
                   title: const Text('Today'),
@@ -62,7 +62,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ),
               ],
             ),
-            const Divider(thickness: 2, height: 1),
+            const Divider(thickness: 1, height: 0), // Set the height to 0 to reduce spacing
 
             // "Where" ExpansionTile with input field and submit button
             ExpansionTile(
@@ -74,7 +74,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
-              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8), // Reduced horizontal padding
               children: [
                 ListTile(
                   title: TextField(
@@ -104,7 +104,8 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ),
               ],
             ),
-            const Divider(thickness: 2, height: 1),
+            const Divider(thickness: 1, height: 0), // Reduced height to 0
+
             // "Who" ExpansionTile
             ExpansionTile(
               title: const Row(
@@ -115,7 +116,7 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
-              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8), // Reduced horizontal padding
               children: [
                 ListTile(
                   title: const Text('Person 1'),
@@ -133,19 +134,19 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ),
               ],
             ),
-            const Divider(thickness: 2, height: 1),
+            const Divider(thickness: 1, height: 0), // Reduced height to 0
 
             // "Activities" ExpansionTile
             ExpansionTile(
               title: const Row(
                 children: [
-                  Icon(Icons.event_note_outlined, color:  Color.fromARGB(255,134, 99, 42),),
+                  Icon(Icons.event_note_outlined, color: Color.fromARGB(255, 134, 99, 42)),
                   SizedBox(width: 5),
                   Text('Activities', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
-              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8), // Reduced horizontal padding
               children: [
                 RadioListTile<String>(
                   title: const Text('Activity 1'),
@@ -169,19 +170,19 @@ class ExpansionTilesState extends State<ExpansionTiles> {
                 ),
               ],
             ),
-            const Divider(thickness: 2, height: 1),
+            const Divider(thickness: 1, height: 0), // Reduced height to 0
 
             // "Spot" ExpansionTile with checkboxes
             ExpansionTile(
               title: const Row(
                 children: [
-                  Icon(Icons.local_activity, color: Color.fromARGB(255,76, 175, 80),),
+                  Icon(Icons.local_activity, color: Color.fromARGB(255, 76, 175, 80)),
                   SizedBox(width: 5),
                   Text('Spot', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
                 ],
               ),
               childrenPadding: const EdgeInsets.symmetric(horizontal: 16),
-              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              tilePadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8), // Reduced horizontal padding
               children: [
                 CheckboxListTile(
                   title: const Text('Spot 1'),

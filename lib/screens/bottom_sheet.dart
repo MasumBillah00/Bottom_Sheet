@@ -13,7 +13,7 @@ class FilterBottomSheet extends StatefulWidget {
 class _FilterBottomSheetState extends State<FilterBottomSheet> {
   List<String> selectedFilters = [];
   String? selectedActivity;
-  TextEditingController _locationController = TextEditingController();
+  final TextEditingController _locationController = TextEditingController();
 
   // Map to store filters and their corresponding icons
   final Map<String, Map<String, dynamic>> filterIconsAndColors = {
@@ -85,7 +85,8 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                                 borderRadius: BorderRadius.circular(2.0),
                               ),
                             ),
-                            style: const TextStyle(fontSize: 14, height: 1),
+                            style: const TextStyle(fontSize: 14, height: 1,color: Colors.red
+                            ),
                             textAlignVertical: TextAlignVertical.center,
                           ),
                         ),
